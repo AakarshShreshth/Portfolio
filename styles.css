@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&effect=3d-float | neon | fire-animation");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Comfortaa;
+}
+
+nav {
+    /* display: flex; */
+    align-items: center;
+    /* background-color: burlywood; */
+    background-color: rgba(55, 50, 50, 0.5);
+    justify-content: space-around;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+}
+
+#grid {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: 65px auto auto auto auto auto 60px;
+    /* grid-template-rows: 75px; */
+}
+
+.grid-item {
+    /* height: 55px; */
+    text-align: center;
+    justify-items: center;
+    /* background-color: cornflowerblue; */
+    padding: 10px;
+}
+
+#logo {
+    padding-top: 5px;
+}
+
+.grid-item img {
+    border-radius: 5px;
+}
+
+.grid-item img:hover {
+    transform: scale(1.25);
+    transition: transform 0.3s ease-in;
+}
+
+.nav-items {
+    border-radius: 25px;
+    font-weight: bolder;
+    background-color: rosybrown;
+    font-size: 28px;
+    color: darkred;
+    border-color: transparent;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.nav-items:hover {
+    color: red;
+    font-size: 36px;
+    /* transform: scale(1.1); */
+    transition: 0.2s ease-out;
+}
+
+#theme {
+    font-size: 24px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#theme:hover {
+    /* font-size: 28px;
+    transform: translateX(100%); */
+    transform: scale(1.25);
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+#top {
+    background-color: transparent;
+    height: 75px;
+    /* margin: 5px; */
+    padding: 10px;
+}
+
+#home {
+    height: 100vh;
+    /* margin: 5px; */
+    padding: 10px;
+    background: linear-gradient(
+        -45deg,
+        #3f51b1 0%,
+        #5a55ae 13%,
+        #7b5fac 25%,
+        #8f6aae 38%,
+        #a86aa4 50%,
+        #cc6b8e 62%,
+        #f18271 75%,
+        #f3a469 87%,
+        #f7c978 100%
+    );
+    background-size: 400% 400%;
+    /* position: relative; */
+    animation: animate 7.5s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    padding-left: 25px;
+    font-size: 72px;
+    /* background-color: aqua; */
+}
+
+#home > h1::after {
+    content: "";
+    width: 2px;
+    height: 64px;
+    /* color: white; */
+    background-color: crimson;
+    position: absolute;
+    margin-left: 0%;
+    animation: blink 0.5s infinite ease;
+    /* font-size: 7vw; */
+}
+
+#home > h1 {
+    color:firebrick;
+    background: rgba(255, 255, 255, 0.2);
+    height: 104px;
+    padding: 20px;
+    font-size: 64px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#pic {
+    border-color: chocolate;
+    margin: 10px;
+    border: 20px solid rgba(55, 50, 50, 0.7);
+    border-radius: 50%;
+}
+
+#about {
+    background-color: blue;
+    height: 90vh;
+    margin: 5px;
+    padding: 10px;
+}
+
+#skills {
+    background-color: lightgreen;
+    height: 100vh;
+    /* margin: 5px; */
+    padding: 10px;
+}
+
+#foo {
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+}
+
+#skills-grid {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 50px;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+
+.skills-items {
+    padding: 15px;
+    align-items: center;
+}
+
+.skills-items > img {
+    height: 100px;
+    width: 100px;
+}
+.skills-items > img:hover {
+    transform: scale(1.25);
+    transition: transform 100ms ease;
+}
+
+#projects {
+    background-color: teal;
+    height: 90vh;
+    margin: 5px;
+    padding: 10px;
+}
+
+#contacts {
+    background-color: sandybrown;
+    height: 25vh;
+    margin: 5px;
+    padding: 10px;
+}
+#contacts > div {
+    align-items: center;
+    justify-items: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#container > div {
+    margin: 10px;
+    padding: 10px;
+}
+
+#container > div:hover {
+    transform: scale(1.25);
+    transition: transform 0.5s ease-out;
+}
